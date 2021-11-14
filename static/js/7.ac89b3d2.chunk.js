@@ -1,0 +1,2 @@
+(this.webpackJsonpTikTuk=this.webpackJsonpTikTuk||[]).push([[7],{75:function(s,e,i){"use strict";i.r(e);var n=i(10),t=i(2);e.default=function(s){return Object(t.jsxs)("h1",{children:["Find best videos in ",Object(t.jsx)(n.b,{to:"/",children:"Trends"})," :)"]})}}}]);
+//# sourceMappingURL=7.ac89b3d2.chunk.js.map

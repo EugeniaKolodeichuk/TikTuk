@@ -1,0 +1,37 @@
+{
+  "files": {
+    "static/js/0.9348fe82.chunk.js": "/TikTuk/static/js/0.9348fe82.chunk.js",
+    "static/js/0.9348fe82.chunk.js.map": "/TikTuk/static/js/0.9348fe82.chunk.js.map",
+    "main.css": "/TikTuk/static/css/main.9351a8a6.chunk.css",
+    "main.js": "/TikTuk/static/js/main.00028d3a.chunk.js",
+    "main.js.map": "/TikTuk/static/js/main.00028d3a.chunk.js.map",
+    "runtime-main.js": "/TikTuk/static/js/runtime-main.c2ac6ad8.js",
+    "runtime-main.js.map": "/TikTuk/static/js/runtime-main.c2ac6ad8.js.map",
+    "static/js/3.b40bbb92.chunk.js": "/TikTuk/static/js/3.b40bbb92.chunk.js",
+    "static/js/3.b40bbb92.chunk.js.map": "/TikTuk/static/js/3.b40bbb92.chunk.js.map",
+    "static/css/4.8d02692f.chunk.css": "/TikTuk/static/css/4.8d02692f.chunk.css",
+    "static/js/4.05d9673c.chunk.js": "/TikTuk/static/js/4.05d9673c.chunk.js",
+    "static/js/4.05d9673c.chunk.js.map": "/TikTuk/static/js/4.05d9673c.chunk.js.map",
+    "static/css/5.f275fe33.chunk.css": "/TikTuk/static/css/5.f275fe33.chunk.css",
+    "static/js/5.29d01374.chunk.js": "/TikTuk/static/js/5.29d01374.chunk.js",
+    "static/js/5.29d01374.chunk.js.map": "/TikTuk/static/js/5.29d01374.chunk.js.map",
+    "static/js/6.1e355b10.chunk.js": "/TikTuk/static/js/6.1e355b10.chunk.js",
+    "static/js/6.1e355b10.chunk.js.map": "/TikTuk/static/js/6.1e355b10.chunk.js.map",
+    "static/js/7.ac89b3d2.chunk.js": "/TikTuk/static/js/7.ac89b3d2.chunk.js",
+    "static/js/7.ac89b3d2.chunk.js.map": "/TikTuk/static/js/7.ac89b3d2.chunk.js.map",
+    "static/js/8.d5574dac.chunk.js": "/TikTuk/static/js/8.d5574dac.chunk.js",
+    "static/js/8.d5574dac.chunk.js.map": "/TikTuk/static/js/8.d5574dac.chunk.js.map",
+    "index.html": "/TikTuk/index.html",
+    "static/css/4.8d02692f.chunk.css.map": "/TikTuk/static/css/4.8d02692f.chunk.css.map",
+    "static/css/5.f275fe33.chunk.css.map": "/TikTuk/static/css/5.f275fe33.chunk.css.map",
+    "static/css/main.9351a8a6.chunk.css.map": "/TikTuk/static/css/main.9351a8a6.chunk.css.map",
+    "static/js/3.b40bbb92.chunk.js.LICENSE.txt": "/TikTuk/static/js/3.b40bbb92.chunk.js.LICENSE.txt",
+    "static/media/default.9d463bad.png": "/TikTuk/static/media/default.9d463bad.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c2ac6ad8.js",
+    "static/js/3.b40bbb92.chunk.js",
+    "static/css/main.9351a8a6.chunk.css",
+    "static/js/main.00028d3a.chunk.js"
+  ]
+}
