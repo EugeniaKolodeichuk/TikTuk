@@ -1,51 +1,58 @@
 import { useState, useEffect, Fragment } from 'react';
 import shortid from 'shortid';
-import { Link /* useRouteMatch */ } from 'react-router-dom';
-/* import { trends, axios } from '../services/apiService'; */
-/* import * as infoAPI from '../services/apiService'; */
-/* import axios from 'axios';
 import { Link } from 'react-router-dom';
-import userEvent from '@testing-library/user-event'; */
 import defaultImage from '../default.png';
 
 export default function NewsView() {
-  /* const { url } = useRouteMatch(); */
   const [trendingFeed, setTrendingFeed] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [fetching, setFetching] = useState(true);
+
+  useEffect(() => {
+    document.addEventListener('scroll', scrollHandler);
+
+    return function () {
+      document.removeEventListener('scroll', scrollHandler);
+    };
+  }, []);
+
+  const scrollHandler = e => {
+    if (
+      e.target.documentElement.scrollHeight -
+        (e.target.documentElement.scrollTop + window.innerHeight) <
+      100
+    ) {
+      setFetching(true);
+    }
+  };
 
   const axios = require('axios').default;
 
   const trends = {
     method: 'GET',
-    url: 'https://tiktok33.p.rapidapi.com/trending/feed',
+    url: `https://tiktok33.p.rapidapi.com/trending/feed/?limit=5&page=${currentPage}`,
     headers: {
       'x-rapidapi-host': 'tiktok33.p.rapidapi.com',
       'x-rapidapi-key': '98c48d70edmsh2b6af9661af19a5p11b7f7jsnbe8317f49551',
     },
   };
 
-  /* const axios = require('axios').default;
-
-  const options = {
-    method: 'GET',
-    url: 'https://tiktok33.p.rapidapi.com/trending/feed',
-    headers: {
-      'x-rapidapi-host': 'tiktok33.p.rapidapi.com',
-      'x-rapidapi-key': '98c48d70edmsh2b6af9661af19a5p11b7f7jsnbe8317f49551',
-    },
-  }; */
-
   useEffect(() => {
-    axios
-      .request(trends)
-      .then(function (response) {
-        const data = response.data;
-        setTrendingFeed(data);
-      })
-      .catch(function (error) {
-        console.error(error);
-      });
+    if (fetching) {
+      axios
+        .request(trends)
+        .then(function (response) {
+          const data = response.data;
+          setTrendingFeed([...trendingFeed, ...data]);
+          setCurrentPage(prevState => prevState + 1);
+        })
+        .catch(function (error) {
+          console.error(error);
+        })
+        .finally(() => setFetching(false));
+    }
     // eslint-disable-next-line
-  }, [setTrendingFeed]);
+  }, [fetching]);
 
   return (
     <div>
@@ -53,7 +60,7 @@ export default function NewsView() {
         trendingFeed.map(user => (
           <Fragment key={shortid.generate()}>
             <video
-              width="400"
+              width="200"
               controls="controls"
               /* poster="video/duel.jpg" */
             >
@@ -69,7 +76,7 @@ export default function NewsView() {
               />
             ) : (
               <img
-                width="400px"
+                width="150px"
                 src={defaultImage}
                 alt={user.authorMeta.nickName}
               />

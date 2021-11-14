@@ -8,18 +8,28 @@ import NotFoundView from './views/NotFoundView';
 import ProfileView from './views/ProfileView'; */
 /* import Spinner from './components/Loader/Loader'; */
 
-const AppBar = lazy(() => import('./components/AppBar/AppBar'));
-const Container = lazy(() => import('./components/Container/Container'));
-const NewsView = lazy(() => import('./views/NewsView'));
-const NotFoundView = lazy(() => import('./views/NotFoundView'));
-const ProfileView = lazy(() => import('./views/ProfileView'));
-/* const Spinner = lazy(() => import('./components/Loader/Loader')); */
+const AppBar = lazy(() =>
+  import('./components/AppBar/AppBar' /*webpackChunkName: "app-bar"*/),
+);
+const Container = lazy(() =>
+  import('./components/Container/Container' /*webpackChunkName: "container"*/),
+);
+const NewsView = lazy(() =>
+  import('./views/NewsView' /*webpackChunkName: "news-view"*/),
+);
+const NotFoundView = lazy(() =>
+  import('./views/NotFoundView' /*webpackChunkName: "not-found-page"*/),
+);
+const ProfileView = lazy(() =>
+  import('./views/ProfileView' /*webpackChunkName: "profile-view"*/),
+);
 
 export default function App() {
   return (
     <Suspense fallback={<h2>Loading...</h2>}>
       <Container>
         <AppBar />
+
         <Suspense fallback={<h2>Loading...</h2>}>
           <Switch>
             <Route path="/" exact>
@@ -29,10 +39,6 @@ export default function App() {
             <Route path="/profile/:uniqueId">
               <ProfileView />
             </Route>
-
-            {/* <Route path="/profile>
-          <ProfileView />
-        </Route> */}
 
             <Route>
               <NotFoundView />
