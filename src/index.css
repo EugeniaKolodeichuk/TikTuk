@@ -5,6 +5,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url(./bg4.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  font-size: 18px;
 }
 
 code {
@@ -15,4 +19,30 @@ code {
 .Loader {
   margin-right: auto;
   margin-left: auto;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: flex;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+
+}
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+  text-decoration: none;
 }

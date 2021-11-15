@@ -15,13 +15,17 @@ const Container = lazy(() =>
   import('./components/Container/Container' /*webpackChunkName: "container"*/),
 );
 const NewsView = lazy(() =>
-  import('./views/NewsView' /*webpackChunkName: "news-view"*/),
+  import('./views/NewsView/NewsView' /*webpackChunkName: "news-view"*/),
 );
 const NotFoundView = lazy(() =>
-  import('./views/NotFoundView' /*webpackChunkName: "not-found-page"*/),
+  import(
+    './views/NotFoundView/NotFoundView' /*webpackChunkName: "not-found-page"*/
+  ),
 );
 const ProfileView = lazy(() =>
-  import('./views/ProfileView' /*webpackChunkName: "profile-view"*/),
+  import(
+    './views/ProfileView/ProfileView' /*webpackChunkName: "profile-view"*/
+  ),
 );
 
 export default function App() {
