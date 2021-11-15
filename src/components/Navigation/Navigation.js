@@ -11,13 +11,13 @@ const Navigation = () => (
     >
       Trends
     </NavLink>
-    <NavLink
+    {/* <NavLink
       to="/profile"
       className={styles.link}
       activeClassName={styles.activeLink}
     >
       Profile
-    </NavLink>
+    </NavLink> */}
   </nav>
 );
 

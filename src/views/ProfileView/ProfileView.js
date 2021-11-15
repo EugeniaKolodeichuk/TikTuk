@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import shortid from 'shortid';
 import defaultImage from '../default.png';
 import styles from '../ProfileView/ProfileView.module.css';
+import Loader from 'react-loader-spinner';
 
 export default function ProfileView() {
   const { uniqueId } = useParams();
@@ -122,7 +123,9 @@ export default function ProfileView() {
             </div>
           ))
         ) : (
-          <h2>Loading...</h2>
+          <>
+            <Loader />
+          </>
         )}
       </div>
     </div>
