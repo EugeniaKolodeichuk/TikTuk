@@ -6,7 +6,8 @@ export default NotFoundPage => {
   return (
     <h1 className={styles.title}>
       <Link className={styles.link} to="/">
-        Find best videos in Trends :)
+        Find best videos in Trends and get more information about it's author
+        here :)
       </Link>
     </h1>
   );

@@ -96,7 +96,7 @@ export default function NewsView() {
             <div className={styles.tags}>
               {user.hashtags &&
                 user.hashtags.map(tag => (
-                  <p key={shortid.generate()}>#{tag.name}</p>
+                  <p key={shortid.generate()}> #{tag.name} </p>
                 ))}
             </div>
             <p>

@@ -36,14 +36,17 @@ export default function App() {
 
         <Suspense fallback={<h2>Loading...</h2>}>
           <Switch>
-            <Route path="/" exact>
-              <NewsView />
+            <Route path="/profile" exact>
+              <NotFoundView />
             </Route>
 
-            <Route path="/profile/:uniqueId">
+            <Route path="/profile/:uniqueId" exact>
               <ProfileView />
             </Route>
 
+            <Route path="/">
+              <NewsView />
+            </Route>
             <Route>
               <NotFoundView />
             </Route>
