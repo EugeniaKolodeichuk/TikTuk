@@ -1,2 +1,0 @@
-(this.webpackJsonpTikTuk=this.webpackJsonpTikTuk||[]).push([[5],{78:function(t,i,e){t.exports={link:"NotFoundView_link__1dGZv",title:"NotFoundView_title__7TUJX"}},81:function(t,i,e){"use strict";e.r(i);var n=e(10),s=e(78),c=e.n(s),o=e(2);i.default=function(t){return Object(o.jsx)("h1",{className:c.a.title,children:Object(o.jsx)(n.b,{className:c.a.link,to:"/",children:"Find best videos in Trends :)"})})}}}]);
-//# sourceMappingURL=not-found-page.58a11bce.chunk.js.map
