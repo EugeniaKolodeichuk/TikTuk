@@ -1,8 +1,9 @@
 .link {
-    display: inline-block;
     text-decoration: none;
     padding: 10px;
     color: inherit;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .link:hover {

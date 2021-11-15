@@ -5,11 +5,9 @@ import styles from '../NotFoundView/NotFoundView.module.css';
 export default NotFoundPage => {
   return (
     <h1 className={styles.title}>
-      Find best videos in
       <Link className={styles.link} to="/">
-        Trends
+        Find best videos in Trends :)
       </Link>
-      :)
     </h1>
   );
 };
