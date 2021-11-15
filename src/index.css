@@ -5,7 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url(./bg4.jpg);
+  background: url(./bg3.jpg);
+  background-blend-mode: luminosity;
   background-size: cover;
   background-attachment: fixed;
   font-size: 18px;
@@ -16,10 +17,9 @@ code {
     monospace;
 }
 
-.Loader {
-  margin-right: auto;
-  margin-left: auto;
-}
+/* .Loader {
+  margin: auto;
+} */
 
 * {
   margin: 0;
@@ -36,7 +36,7 @@ img {
 
 }
 
-ul,
+/* ul,
 li {
   padding: 0;
   margin: 0;
@@ -45,4 +45,4 @@ li {
 li {
   list-style: none;
   text-decoration: none;
-}
+} */

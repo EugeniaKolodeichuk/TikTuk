@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+/* import { Link } from 'react-router-dom';
 import styles from '../NotFoundView/NotFoundView.module.css';
 
 // eslint-disable-next-line
@@ -11,4 +11,4 @@ export default NotFoundPage => {
       </Link>
     </h1>
   );
-};
+}; */

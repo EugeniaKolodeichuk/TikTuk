@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import shortid from 'shortid';
 import defaultImage from '../default.png';
 import styles from '../ProfileView/ProfileView.module.css';
-import Loader from 'react-loader-spinner';
+import Loader from '../../components/Loader/Loader';
 
 export default function ProfileView() {
   const { uniqueId } = useParams();
@@ -65,7 +65,7 @@ export default function ProfileView() {
               <img
                 key={shortid.generate()}
                 width="150px"
-                src={userInfo.user.avatarThumb}
+                src={userInfo.user.avatarMedium}
                 alt={userInfo.user.nickname}
                 className={styles.avatar}
               />

@@ -1,5 +1,6 @@
 import { lazy, Suspense } from 'react';
 import { Route, Switch } from 'react-router';
+
 import './App.css';
 /* import AppBar from './components/AppBar/AppBar';
 import Container from './components/Container/Container';
@@ -17,11 +18,10 @@ const Container = lazy(() =>
 const NewsView = lazy(() =>
   import('./views/NewsView/NewsView' /*webpackChunkName: "news-view"*/),
 );
-const NotFoundView = lazy(() =>
+/* const NotFoundView = lazy(() =>
   import(
-    './views/NotFoundView/NotFoundView' /*webpackChunkName: "not-found-page"*/
-  ),
-);
+    './views/NotFoundView/NotFoundView' ),
+); */
 const ProfileView = lazy(() =>
   import(
     './views/ProfileView/ProfileView' /*webpackChunkName: "profile-view"*/
@@ -34,24 +34,22 @@ export default function App() {
       <Container>
         <AppBar />
 
-        <Suspense fallback={<h2>Loading...</h2>}>
-          <Switch>
-            <Route path="/profile" exact>
+        <Switch>
+          <Route path="/profile/:uniqueId">
+            <ProfileView />
+          </Route>
+
+          {/* <Route path="/profile">
               <NotFoundView />
-            </Route>
+            </Route> */}
 
-            <Route path="/profile/:uniqueId" exact>
-              <ProfileView />
-            </Route>
-
-            <Route path="/">
+          {/* <Route path="/">
               <NewsView />
-            </Route>
-            <Route>
-              <NotFoundView />
-            </Route>
-          </Switch>
-        </Suspense>
+            </Route> */}
+          <Route>
+            <NewsView />
+          </Route>
+        </Switch>
       </Container>
     </Suspense>
   );

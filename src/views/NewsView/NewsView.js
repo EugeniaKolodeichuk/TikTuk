@@ -3,6 +3,7 @@ import shortid from 'shortid';
 import { Link } from 'react-router-dom';
 import defaultImage from '../default.png';
 import styles from '../NewsView/NewsView.module.css';
+import Loader from '../../components/Loader/Loader';
 
 export default function NewsView() {
   const [trendingFeed, setTrendingFeed] = useState([]);
@@ -57,7 +58,7 @@ export default function NewsView() {
 
   return (
     <div className={styles.wrap}>
-      {trendingFeed &&
+      {trendingFeed.length ? (
         trendingFeed.map(user => (
           <div className={styles.list_noorder} key={shortid.generate()}>
             <video
@@ -67,7 +68,7 @@ export default function NewsView() {
             >
               <source src={user.videoUrl} type="video/mp4;" />
             </video>
-            <p key={shortid.generate()}>{user.text}</p>
+            <p>{user.text}</p>
             <div className={styles.user_info}>
               {user.authorMeta.avatar ? (
                 <img
@@ -106,7 +107,10 @@ export default function NewsView() {
               Likes: <b>{user.diggCount}</b>
             </p>
           </div>
-        ))}
+        ))
+      ) : (
+        <Loader />
+      )}
     </div>
   );
 }
