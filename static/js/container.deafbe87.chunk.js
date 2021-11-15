@@ -1,0 +1,2 @@
+(this.webpackJsonpTikTuk=this.webpackJsonpTikTuk||[]).push([[2],{100:function(n,t,i){"use strict";i.r(t),i.d(t,"default",(function(){return a}));var e=i(53),r=i.n(e),c=i(2);function a(n){var t=n.children;return Object(c.jsx)("div",{className:r.a.container,children:t})}},53:function(n,t,i){n.exports={container:"Container_container__1FLyV"}}}]);
+//# sourceMappingURL=container.deafbe87.chunk.js.map
