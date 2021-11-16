@@ -6,7 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: url(./bg3.jpg);
-  background-blend-mode: luminosity;
+
   background-size: cover;
   background-attachment: fixed;
   font-size: 18px;
@@ -16,10 +16,6 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-/* .Loader {
-  margin: auto;
-} */
 
 * {
   margin: 0;
@@ -35,14 +31,3 @@ img {
   padding: 0;
 
 }
-
-/* ul,
-li {
-  padding: 0;
-  margin: 0;
-}
-
-li {
-  list-style: none;
-  text-decoration: none;
-} */

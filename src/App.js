@@ -2,6 +2,7 @@ import { lazy, Suspense } from 'react';
 import { Route, Switch } from 'react-router';
 
 import './App.css';
+import Loader from './components/Loader/Loader';
 /* import AppBar from './components/AppBar/AppBar';
 import Container from './components/Container/Container';
 import NewsView from './views/NewsView';
@@ -20,7 +21,7 @@ const NewsView = lazy(() =>
 );
 /* const NotFoundView = lazy(() =>
   import(
-    './views/NotFoundView/NotFoundView' ),
+    './views/NotFoundView/NotFoundView' т),
 ); */
 const ProfileView = lazy(() =>
   import(
@@ -30,7 +31,7 @@ const ProfileView = lazy(() =>
 
 export default function App() {
   return (
-    <Suspense fallback={<h2>Loading...</h2>}>
+    <Suspense fallback={<Loader />}>
       <Container>
         <AppBar />
 
